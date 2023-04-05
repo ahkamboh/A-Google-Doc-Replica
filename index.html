@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ahkamboh/ahkamboh@9ac9155ed457aca5dc66fac90df2b2fda197b1b4/Kamboh-frame-work/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container" data-aos="zoom-out-up">
+    <h4>My Document</h4>
+    <div class="font">
+      <p>Font</p>
+      <button><b>B</b></button>
+      <button class="italic"><i>I</i></button>
+      <button class="underline"><u>U</u></button>
+    </div>
+    <div class="align">
+      <p>Align</p>
+      <button class="left">L</button>
+      <button class="center">C</button>
+      <button class="right">R</button>
+      <button class="justify">J</button>
+    </div>
+    <div class="align float">
+      <p>Font Style</p>
+      <select onchange="changeFont(this);">
+        <option value="Arial" selected>Arial</option>
+        <option value="Poppins">Poppins</option>
+        <option value="Noto Nastaliq Urdu">Noto Nastaliq Urdu</option>
+        <option value="Comic Sans MS">Comic Sans MS</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Trebuchet MS">Trebuchet MS</option>
+        <option value="Arial Black">Arial Black</option>
+        <option value="Impact">Impact</option>
+        <option value="Bookman">Bookman</option>
+        <option value="Garamond">Garamond</option>
+        <option value="Palatino">Palatino</option>
+        <option value="Georgia">Georgia</option>
+      </select>
+    </div>
+    <div class="align ">
+      <p>Text Transform</p>
+      <select onchange="TextTransform(this)">
+        <OPTIOn>null</OPTIOn>
+        <option value="capitalize">Capitalize</option>
+        <option value="uppercase">Uppercase</option>
+        <option value="lowercase">lowercase</option>
+      </select>
+    </div>
+    <div class="align ">
+      <p>Color</p>
+<form style="display: flex; gap: 10px;">
+        <input type="color" id="InputText" onchange="changetext()">
+      <h5 style="position: relative; top: 5px;" id="h3"> </h5>
+      </form>
+      </select>
+    </div>
+    <hr>
+    <div id="font" name="display" class="artboard" contenteditable="true">
+    </div>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/ahkamboh/ahkamboh@2936876a1f95d16e5f177f0fccb366063d88c476/Kamboh-frame-work/script.js"></script>
+  
+</body>
+
+</html>
