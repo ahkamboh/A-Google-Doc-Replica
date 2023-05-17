@@ -5,20 +5,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A-Google-Doc-Replica</title>
-   <link rel="icon" href="ahkambohlogo.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ahkamboh/ahkamboh@9ac9155ed457aca5dc66fac90df2b2fda197b1b4/Kamboh-frame-work/style.css">
+  <!-- fb & Whatsapp -->
+
+<!-- Site Name, Title, and Description to be displayed -->
+<meta property="og:site_name" content="Text Editer">
+<meta property="og:title" content="Text Editer by kambodiv">
+<meta property="og:description" content=" This Text Editor provide various features like text formation, color change ,font change and manymore ">
+<!-- Image to display -->
+<meta property="og:image" content="https://github.com/ahkamboh/Portfolio/blob/main/ahkambohlogo.png">
+<!-- No need to change anything here -->
+<meta property="og:type" content="website" />
+<meta property="og:image:type" content="image/png">
+<!-- Size of image. Any size up to 300. Anything above 300px will not work in WhatsApp -->
+<meta property="og:image:width" content="300">
+<meta property="og:image:height" content="300">
+<!-- Website to visit when clicked in fb or WhatsApp-->
+<meta property="og:url" content="https://ahkamboh.github.io/Portfolio/">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.statically.io/gh/kambohdiv/Kambohdiv/9afce931a6ff57ae67f203f90aa1d91841e86582/style.css">
+  <link rel="icon" href="ahkambohlogo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="ahkambohlogo.png">
 </head>
 
 <body>
-
+  <div class="img">
+    <img src="ahkambohlogo.png" alt="ahkamboh" height="100">
+  </div>
   <div class="container" data-aos="zoom-out-up">
-    <h4>My Document</h4>
+    <h4>My document</h4>
     <div class="font">
       <p>Font</p>
       <button><b>B</b></button>
@@ -34,7 +53,7 @@
     </div>
     <div class="align float">
       <p>Font Style</p>
-      <select onchange="changeFont(this);">
+      <select class="select" onchange="changeFont(this);">
         <option value="Arial" selected>Arial</option>
         <option value="Poppins">Poppins</option>
         <option value="Noto Nastaliq Urdu">Noto Nastaliq Urdu</option>
@@ -54,30 +73,50 @@
     <div class="align ">
       <p>Text Transform</p>
       <select onchange="TextTransform(this)">
-        <OPTIOn>null</OPTIOn>
+        <OPTIOn selected value="none">None</OPTIOn>
         <option value="capitalize">Capitalize</option>
         <option value="uppercase">Uppercase</option>
         <option value="lowercase">lowercase</option>
       </select>
     </div>
-    <div class="align ">
-      <p>Color</p>
-<form style="display: flex; gap: 10px;">
-        <input type="color" id="InputText" onchange="changetext()">
-      <h5 style="position: relative; top: 5px;" id="h3"> </h5>
-      </form>
-      </select>
+    <div class="align just ">
+      <p id="InputColor">Color</p>
+      <input type="color" id="inputColor" onchange="changecolor()" style="cursor: pointer;">
     </div>
-    <hr>
-    <div id="font" name="display" class="artboard" contenteditable="true">
+    <button class="align" onclick="runSpeechRecog()">
+      Speech to text
+    </button>
+    <div class="option file-name align">
+      <label for="text">File name</label>
+      <input type="text" id="text" placeholder="Enter file name" />
+    </div>
+    <div class="wrapper">
+      <textarea id="font" name="display" class="artboard" spellcheck="true" placeholder="Enter text to save"
+        required></textarea>
+      <div class="option save-as">
+        <label for="">Save as</label>
+        <div class="select-menu">
+          <select name="" id="">
+            <option value="text/plain">Text File (.txt)</option>
+            <option value="text/javascript">JS File (.js)</option>
+            <option value="text/html">HTML File (.html)</option>
+            <option value="text/css"> Css File (.css)</option>
+            <option value="image/svg+xml">SVG File (.svg)</option>
+            <option value="application/msword">Doc File (.doc)</option>
+            <option value="application/vnd.ms-powerpoint">
+              PPT File (.ppt)</option>
+            <option value="application/pdf"> Pdf File (.pdf)</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn">Save as text file</button>
     </div>
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-  <script src="https://cdn.jsdelivr.net/gh/ahkamboh/ahkamboh@2936876a1f95d16e5f177f0fccb366063d88c476/Kamboh-frame-work/script.js"></script>
-  
+  <script src="https://cdn.statically.io/gh/kambohdiv/Kambohdiv/main/script.js"></script>
 </body>
 
 </html>
